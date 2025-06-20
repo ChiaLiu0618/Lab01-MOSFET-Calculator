@@ -127,12 +127,12 @@ always @(*) begin
     end
 end
 
-assign sum = calc_0 + calc_1 + calc_2;
+assign sum = (calc_0 + calc_1 + calc_2) / 3;
 
 // Divide
 always @(*) begin
-    if(mode[0]) out_n = sum / 12;
-    else out_n = sum / 3;
+    if(mode[0]) out_n = sum >> 2;
+    else out_n = sum;
 end
 
 
