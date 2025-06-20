@@ -24,7 +24,7 @@ This lab focuses on designing a Supper MOSFET Calculator (SMC) to calculate the 
 - **Mode [1:0]:**
   - `mode[0]`: 1 = calculate current (ID), 0 = calculate transconductance (gm)
   - `mode[1]`: 1 = output larger, 0 = output smaller
-- **Output:** 8-bit result ranging `[0,256]`
+- **Output:** 8-bit result ranging `[0,255]`
 
 ### Operations
 1. **Determine Region** (Triode or Saturation) based on `(VGS - 1)` vs `VDS`
