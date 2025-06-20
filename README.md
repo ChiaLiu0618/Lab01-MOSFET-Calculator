@@ -53,27 +53,19 @@ This lab focuses on designing a Supper MOSFET Calculator (SMC) to calculate the 
 1. **Top Module Name:** `SMC.v`
 2. **Synthesis Constraints:**
    - Must have "MET" slack at end of timing report.
-   - No latches allowed (`grep "Latch" 02_SYN/syn.log`).
-3. **Performance:** Smaller area → Higher score.
-4. **Forbidden signal names:** Avoid using names with `error`, `Congratulations`, `latch`, `FAIL`.
+   - No latches allowed.
+3. **Performance:** Area is the primary optimization target for efficiency in this lab.
 
-## Workflow
-1. **Extract Files**:  
-   `tar -xvf ~iclabTA01/Lab01.tar`
-2. **Simulation (RTL):**  
-   `./01_run_vcs_rtl`
-3. **Synthesis:**  
-   `./01_run_dc_shell`
-4. **Check Reports:**  
-   `grep "Latch" 02_SYN/syn.log`  
-   Review: `Report/SMC.timing`, `Report/SMC.area`
-5. **Gate-Level Simulation:**  
-   `./01_run_vcs_gate`
+## Simulation and Testing
+The project includes multiple verification steps:
+- **RTL Simulation**: The RTL simulation is performed using Synopsys VCS.
+- **Synthesis**: The design is synthesized using Synopsys Design Compiler with TSMC 40nm technology.
+- **Gate-Level Simulation**: The synthesized design is simulated using Synopsys VCS.
+- **Waveform Debugging**: Synopsys Verdi is used to inspect signals and debug the design.
 
 ## Hints
 - Prefer behavioral modeling.
 - Use submodules to simplify design.
 - Design for hardware sharing between operations.
-- Write your own test patterns to ensure completeness.
 
 ---
