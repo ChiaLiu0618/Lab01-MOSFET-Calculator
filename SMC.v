@@ -312,35 +312,3 @@ module sort (
         n5 = array[0];   //smallest
     end
 endmodule
-
-
-
-// module BBQ (meat,vagetable,water,cost);
-// input XXX;
-// output XXX;
-// 
-// endmodule
-
-// --------------------------------------------------
-// Example for using submodule 
-// BBQ bbq0(.meat(meat_0), .vagetable(vagetable_0), .water(water_0),.cost(cost[0]));
-// --------------------------------------------------
-// Example for continuous assignment
-// assign out_n = XXX;
-// --------------------------------------------------
-// Example for procedure assignment
-// always@(*) begin 
-// 	out_n = XXX; 
-// end
-// --------------------------------------------------
-// Example for case statement
-// always @(*) begin
-// 	case(op)
-// 		2'b00: output_reg = a + b;
-// 		2'b10: output_reg = a - b;
-// 		2'b01: output_reg = a * b;
-// 		2'b11: output_reg = a / b;
-// 		default: output_reg = 0;
-// 	endcase
-// end
-// --------------------------------------------------
